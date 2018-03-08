@@ -11,9 +11,7 @@ import (
 
 //SimpleBeegoAuth SimpleBeegoAuth
 func SimpleBeegoAuth(beegoConcent *context.Context, Pairs []ldAuthEntity.UNPWPair) error {
-	if beegoConcent.Input.UserAgent() == "highcoiniosap/1.0" {
-		return nil
-	}
+
 	auth := beegoConcent.Input.Header("Authorization")
 	if auth == "" {
 		return errors.New("un login")
