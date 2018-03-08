@@ -10,7 +10,7 @@ import (
 )
 
 //SimpleBeegoAuth SimpleBeegoAuth
-func SimpleBeegoAuth(beegoConcent *context.Context, UserName, PassWord string, Pairs []ldAuthEntity.UNPWPair) error {
+func SimpleBeegoAuth(beegoConcent *context.Context, Pairs []ldAuthEntity.UNPWPair) error {
 	if beegoConcent.Input.UserAgent() == "highcoiniosap/1.0" {
 		return nil
 	}
